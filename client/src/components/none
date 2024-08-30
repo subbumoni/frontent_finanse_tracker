@@ -1,0 +1,78 @@
+// /* eslint-disable react/prop-types */
+// import { useState } from "react";
+// import { Typography,Box,TextField,Button,styled } from "@mui/material";
+// import axios from "axios";
+
+
+// const Container = styled(Box)`
+//   display: flex;
+//   flex-direction: column;
+//   & > h5,
+//   & > div,
+//   & > button {
+//     margin-top: 30px;
+//   }
+// `;
+
+// const StyledButton = styled(Button)`
+//   background: #445a6f;
+//   color: #fff;
+// `;
+
+// const NewTransaction = () => {
+//   const [text, setText] = useState("");
+//   const [amount, setAmount] = useState("");
+
+// const newTransaction = async (text, amount, expenses, setText, setAmount,  sentExpense) => {
+//   const transaction = {
+//     id: Math.floor(Math.random() * 100000000),
+//     text: text,
+//     amount: +amount,
+//   };
+
+//   try {
+//     // Make sure to replace 'http://your-api-url/transactions' with your actual API endpoint
+//     const res = await axios.post(
+//       "http://localhost:6969/transactions",
+//       transaction
+//     );
+    
+  
+   
+// // Update local state with the new transaction
+//     sentExpense([...expenses, res.data]);
+
+//     // Clear input fields
+//     setText("");
+//     setAmount("");
+
+//   } catch (err) {
+//     console.error("Error posting transaction:", err);
+//   }
+// };
+  
+
+//   return (
+//     <Container>
+//       <Typography variant="h5" >
+//         Add New Transaction
+//       </Typography>
+//       <TextField
+//         value={text}
+//         label="Enter Expense"
+//         onChange={(e) => setText(e.target.value)}
+//       />
+//       <TextField
+//         value={amount}
+//         label="Enter Amount"
+//         onChange={(e) => setAmount(e.target.value)}
+//       />
+
+//       <StyledButton variant="contained" onClick={newTransaction}>
+//         Add Transaction
+//       </StyledButton>
+//     </Container>
+//   );
+// };
+
+// export default NewTransaction;
